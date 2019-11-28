@@ -232,7 +232,7 @@ tdef tdefs[] =
 	{"date.tbl","date table",2556,0,{pr_date,ld_date}, 0,vrf_date, NONE,0},
 	/*line order is SF*1,500,000, however due to the implementation
 	  the base here is 150,000 instead if 1500,000*/
-	{"lineorder.tbl", "lineorder table", 150000, hd_line,
+	{"/dev/stdout", "lineorder table", 150000, hd_line,
 		{pr_line, ld_line}, sd_line, vrf_line, NONE, 0},
 	{0,0,0,0,{0,0}, 0,0,0,0},
 	{0,0,0,0,{0,0}, 0,0,0,0},
