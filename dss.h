@@ -505,6 +505,7 @@ extern tdef tdefs[];
 
 int dbg_print(int dt, FILE *tgt, void *data, int len, int eol);
 #define PR_STR(f, str, len)		dbg_print(DT_STR, f, (void *)str, len, 1)
+#define PR_STR_LAST(f, str, len)		dbg_print(DT_STR, f, (void *)str, len, -1)
 #define PR_VSTR(f, str, len) 	dbg_print(DT_VSTR, f, (void *)str, len, 1)
 #define PR_VSTR_LAST(f, str, len) 	dbg_print(DT_VSTR, f, (void *)str, len, 0)
 #define PR_INT(f, str) 			dbg_print(DT_INT, f, (void *)str, 0, 1)
