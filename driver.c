@@ -220,16 +220,14 @@ int vrf_region (code_t * c, int mode);
 #ifdef SSBM
 tdef tdefs[] =
 {
-   
-    	{"part.tbl", "part table", 200000, hd_part,
-		{pr_part, ld_part}, sd_part, vrf_part, PSUPP, 0},
+	{"/dev/stdout", "part table", 200000, hd_part,
+	{pr_part, ld_part}, sd_part, vrf_part, PSUPP, 0},
 	{0,0,0,0,{0,0}, 0,0,0,0},
-	{"supplier.tbl", "suppliers table", 2000, hd_supp,
-	        {pr_supp, ld_supp}, sd_supp, vrf_supp, NONE, 0},
-    
-	{"customer.tbl", "customers table", 30000, hd_cust,
+	{"/dev/stdout", "suppliers table", 2000, hd_supp,
+		{pr_supp, ld_supp}, sd_supp, vrf_supp, NONE, 0},
+	{"/dev/stdout", "customers table", 30000, hd_cust,
 		{pr_cust, ld_cust}, sd_cust, vrf_cust, NONE, 0},
-	{"date.tbl","date table",2556,0,{pr_date,ld_date}, 0,vrf_date, NONE,0},
+	{"/dev/stdout","date table",2556,0,{pr_date,ld_date}, 0,vrf_date, NONE,0},
 	/*line order is SF*1,500,000, however due to the implementation
 	  the base here is 150,000 instead if 1500,000*/
 	{"/dev/stdout", "lineorder table", 150000, hd_line,
